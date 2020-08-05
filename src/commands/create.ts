@@ -1,4 +1,5 @@
 import {Command} from '@oclif/command'
+import {camelCase} from 'change-case'
 import {parsePassedArgs, runHygen} from '../lib'
 import {Config} from '../config'
 
@@ -32,6 +33,7 @@ export default class Create extends Command {
       'feature',
       template,
       `--featureName=${featureName}`,
+      `--camelFeatureName=${camelCase(featureName)}`,
       `--featuresPath=${featuresPath}`,
     ])
   }

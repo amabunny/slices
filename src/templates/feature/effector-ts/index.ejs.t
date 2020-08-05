@@ -3,4 +3,4 @@ to: <%= featuresPath %>/<%= featureName %>/index.ts
 ---
 
 export * from './root'
-export * from './model/<%= featureName %>.init.ts'
+export * from './model/init.ts'

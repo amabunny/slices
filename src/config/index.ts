@@ -12,7 +12,8 @@ interface SlicesRcConfig {
 export class Config {
   static readRc(): SlicesRcConfig {
     const cwdPath = process.cwd()
-    const rcConfig: SlicesRcConfig = require(path.resolve(process.cwd(), '.slicesrc.js'))
+    const configPath = path.resolve(process.cwd(), '.slicesrc.js')
+    const rcConfig: SlicesRcConfig = require(configPath)
 
     return {
       apiPath: path.resolve(cwdPath, rcConfig.apiPath),

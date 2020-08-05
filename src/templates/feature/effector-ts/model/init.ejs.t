@@ -6,6 +6,6 @@ import { createStore, createEvent } from 'effector'
 
 const $data = createStore(null)
 
-export const <%= featureName %>Model = {
+export const <%= camelFeatureName %>Model = {
   $data
 }
