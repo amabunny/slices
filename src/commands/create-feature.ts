@@ -5,7 +5,7 @@ import {Config} from '../config'
 
 const {featuresPath, usingTemplate} = Config.readRc()
 
-export default class Create extends Command {
+export default class CreateFeature extends Command {
   static args = [
     {
       name: 'feature',
@@ -21,7 +21,7 @@ export default class Create extends Command {
   ]
 
   async run() {
-    const {args} = this.parse(Create)
+    const {args} = this.parse(CreateFeature)
 
     const [
       featureName,
